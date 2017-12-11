@@ -59,7 +59,9 @@ public class CryptoHelper {
 	}
 	
 	public static Map<String, Object> encrypt(byte[] pPlainData, Key pEncrytionKey, int pBlockLength, EncrytpionAlgoEnum pAlgorithm) throws Exception {
+		assert pAlgorithm != null;
 		assert pEncrytionKey != null;
+		
 		CryptoInterface lCrypto = CryptoManager.getInstance(pAlgorithm);
 		Map<String, Object> lData =  lCrypto.encrypt(pEncrytionKey, pBlockLength, pPlainData);
 		return lData;	

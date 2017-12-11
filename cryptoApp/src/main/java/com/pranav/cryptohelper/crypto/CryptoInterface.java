@@ -3,6 +3,8 @@ package com.pranav.cryptohelper.crypto;
 import java.security.Key;
 import java.util.Map;
 
+import com.pranav.cryptohelper.crypto.enums.EncrytpionAlgoEnum;
+
 public interface CryptoInterface {
 
 	/**

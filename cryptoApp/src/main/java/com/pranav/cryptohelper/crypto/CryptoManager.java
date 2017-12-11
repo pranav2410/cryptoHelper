@@ -5,6 +5,9 @@ import com.pranav.cryptohelper.crypto.impls.AESCBCNoPadding;
 import com.pranav.cryptohelper.crypto.impls.AESCBCPKCS5Padding;
 import com.pranav.cryptohelper.crypto.impls.AESECBNOPadding;
 import com.pranav.cryptohelper.crypto.impls.AESECBPKCS5Padding;
+import com.pranav.cryptohelper.crypto.impls.HmacMD5Crypto;
+import com.pranav.cryptohelper.crypto.impls.HmacSHA1;
+import com.pranav.cryptohelper.crypto.impls.HmacSHA2;
 import com.pranav.cryptohelper.crypto.impls.MD5Crypto;
 
 public class CryptoManager {
@@ -27,10 +30,18 @@ public class CryptoManager {
 		case MD5_HASH:
 			lCrypto = new MD5Crypto();
 			break;
+		case  HMAC_MD5:
+			lCrypto = new HmacMD5Crypto();
+			break;
+		case  HMAC_SHA1:
+			lCrypto = new HmacSHA1();
+			break;
+		case  HMAC_SHA2:
+			lCrypto = new HmacSHA2();
+			break;
 		default:
 			break;
 		}
-		
 		return lCrypto;
 	}
 

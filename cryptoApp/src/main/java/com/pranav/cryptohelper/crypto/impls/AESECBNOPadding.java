@@ -1,17 +1,20 @@
 package com.pranav.cryptohelper.crypto.impls;
 
-public class AESECBNOPadding extends AESCrypto {
+import java.security.Key;
+import java.util.Map;
 
-	@Override
-	public byte[] encryptSpecific(String pKey, int pBlockLength, byte[] pPlainData) throws Exception {
-		
+import com.pranav.cryptohelper.crypto.CryptoInterface;
+
+public class AESECBNOPadding implements CryptoInterface {
+
+	public Map<String, Object> encrypt(Key pEncrytionKey, int pBlockLength, byte[] pPlainData)throws Exception{
+	
 		return null;
 	}
 
-	@Override
-	public byte[] decryptSpecific(String pKey, int pBlockLength, byte[] pEncryptedData, byte[] pIV) throws Exception {
+	public byte[] decrypt(Key pKey, int pBlockLength, byte[] pEncryptedData, byte[] pIV) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
+		
 	}
-
 }
